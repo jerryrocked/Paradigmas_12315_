@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1664506738 source:c:\users\benja\escritorio\paradigmas\tarea1paradigmas\main.cpp
+	"miniwin.h"
+	"forma.h"
+
+1664455219 c:\users\benja\escritorio\paradigmas\tarea1paradigmas\miniwin.h
+	<iostream>
+
+1664455206 source:c:\users\benja\escritorio\paradigmas\tarea1paradigmas\miniwin.cpp
+	<fstream>
+	<sstream>
+	<queue>
+	<math.h>
+	<process.h>
+	<windows.h>
+	<windowsx.h>
+	"miniwin.h"
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<string>
+	<queue>
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<X11/Xos.h>
+	<X11/Xatom.h>
+	<X11/keysym.h>
+	"miniwin.h"
+
+1664506400 c:\users\benja\escritorio\paradigmas\tarea1paradigmas\forma.h
+	"miniwin.h"
+	<iostream>
+
+1664506738 source:e:\unab\semestre 6\paradigmas\tarea1paradigmas\main.cpp
+	"miniwin.h"
+	"forma.h"
+
+1664455219 e:\unab\semestre 6\paradigmas\tarea1paradigmas\miniwin.h
+	<iostream>
+
+1664506400 e:\unab\semestre 6\paradigmas\tarea1paradigmas\forma.h
+	"miniwin.h"
+	<iostream>
+
+1664455206 source:e:\unab\semestre 6\paradigmas\tarea1paradigmas\miniwin.cpp
+	<fstream>
+	<sstream>
+	<queue>
+	<math.h>
+	<process.h>
+	<windows.h>
+	<windowsx.h>
+	"miniwin.h"
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<string>
+	<queue>
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<X11/Xos.h>
+	<X11/Xatom.h>
+	<X11/keysym.h>
+	"miniwin.h"
+
