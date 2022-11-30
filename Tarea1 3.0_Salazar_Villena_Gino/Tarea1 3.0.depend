@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1668057067 source:c:\users\followingstardust\desktop\tarea1 3.0\miniwin.cpp
+	<fstream>
+	<sstream>
+	<queue>
+	<math.h>
+	<process.h>
+	<windows.h>
+	<windowsx.h>
+	"miniwin.h"
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<string>
+	<queue>
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<X11/Xos.h>
+	<X11/Xatom.h>
+	<X11/keysym.h>
+	"miniwin.h"
+
+1668058791 c:\users\followingstardust\desktop\tarea1 3.0\miniwin.h
+	<iostream>
+
+1668059772 source:c:\users\followingstardust\desktop\tarea1 3.0\main.cpp
+	"miniwin.h"
+	"figure.h"
+	<iostream>
+
+1668059822 c:\users\followingstardust\desktop\tarea1 3.0\figure.h
+	"miniwin.h"
+	<iostream>
+	<string>
+
