@@ -1,0 +1,44 @@
+%-------------------------Menu Principal---------------------------------
+menu :- write('**GESTOR DE PESO IDEAL**'), nl,
+    	write('1.-Calcular peso ideal'), nl,
+    	write('2.-Calcular IMC'), nl,
+    	write('0.-Salir'), nl,
+    	write('Seleccione opcion: '), read(Opcion),
+		ejecutar(Opcion).
+
+%funcion para elegir en el menu
+ejecutar(Opcion):- Opcion == 1, peso_Ideal, menu;
+    Opcion == 2, calculo_imc, menu;
+    Opcion == 0, vuelta.
+	
+
+%funcion de confirmacion de salir del programa
+vuelta:-write('Esta seguro de que desea salir?'), nl,
+    write('1.-Calcular otra persona'), nl,
+    write('0.-Salir'), nl,
+    write('Seleccione opcion: '), read(Opcionsalir),
+    finalizar(Opcionsalir).
+
+finalizar(Opcionsalir):- Opcionsalir == 1, menu;
+    Opcionsalir == 0, true.
+
+
+%calculo de peso ideal
+peso_Ideal:- write('Ingrese altura: '), read(Altura),nl,
+    write('Ingrese edad: '), read(Edad),nl,
+    Peso is Altura-100+((Edad/10)*0.9),
+	write('Su peso ideal es: '), write(Peso), nl.
+
+%calculo de imc
+calculo_imc:- write('Ingrese peso: '), read(Peso), nl,
+    write('Ingrese altura: '), read(Altura), nl,
+    Alt is Altura/100,
+    Resultado is Peso/(Alt*Alt),
+    ((Resultado < 18.5) ->  write('IMC: '), write(Resultado), nl,
+        write('estás por debajo de tu peso ideal, por tanto, te iría bien ganar algo de peso'),nl;
+    (Resultado >= 18.5, Resultado =< 24.9) ->  write('IMC: '), write(Resultado), nl,
+        write('felicidades porque estás en tu peso ideal, no tienes ni que subir ni que bajar'),nl;
+    (Resultado >= 25, Resultado =< 30) ->  write('IMC: '), write(Resultado), nl,
+        write('estás en ligero sobrepeso, tendrías que adelgazar entre 2 a 5 kilos para estar más sano'),nl;
+    (Resultado > 30) ->  write('IMC: '), write(Resultado), nl,
+        write('hablamos de que estás en sobrepeso más severo o, incluso, en obesidad. Es importante que, por motivos de salud, comiences a cambiar tus hábitos y a apostar por una vida más saludable y baja en calorías')).
