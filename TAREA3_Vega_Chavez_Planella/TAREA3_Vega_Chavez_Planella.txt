@@ -1,0 +1,42 @@
+select_imc(IMC):-
+    B is 18.5, IMC<B, 
+    write('Estás por debajo de tu peso ideal, por tanto, te iría bien ganar algo de peso'),nl;
+    B is 18.5, C is 24.9, IMC>=B, IMC<C, 
+    write('Felicidades porque estás en tu peso ideal, no tienes ni que subir ni que bajar'),nl;
+    B is 25, C is 30, IMC>=B, IMC<C,
+    write('Estás en ligero sobrepeso, tendrías que adelgazar entre 2 a 5 kilos para estar más sano'),nl;
+    B is 30, IMC>B,
+    write('Hablamos de que estás en sobrepeso más severo o incluso, en obesidad.'),nl.
+
+selector_sexo(Sexo,Altura,Edad):-
+    Sexo = 1, Peso_ideal is (Altura - 100) + ((Edad/10)*0.9),
+    write('Tu peso ideal es: '), write(Peso_ideal),write(" kg"),nl;
+    Sexo = 2, Peso_ideal is (Altura - 100) + ((Edad/10)*0.9),
+    write('Tu peso ideal es: '), write(Peso_ideal),write(" kg"),nl.
+
+peso_ideal:-
+    write('*** CALCULADORA DE PESO IDEAL ***'),nl,
+    write('Escribe tu Altura en cm: '),read(Altura),
+    write('Escribe tu Edad: '), read(Edad),
+    write('Escribe tu sexo: 1. Masculino, 2. Femenino'), read(Sexo),
+    selector_sexo(Sexo,Altura,Edad).
+
+imc:-
+    write('*** CALCULADORA DE IMC ***'),nl,
+    write('Escribe tu peso: '),read(Peso),
+    write('Escribe tu Altura en cm: '),read(Altura),
+    IMC is (Peso/((Altura/100)*(Altura/100))),
+    write('Tu IMC es: '), write(IMC),nl,
+    select_imc(IMC).
+    
+ejecutar(Option):-
+    Option == 1, peso_ideal, menu;
+    Option == 2, imc, menu;
+    Option == 3, false.
+
+menu:-
+    write('*** GESTOR DE PESO ***'),nl,
+    write('1. PESO IDEAL'),nl,
+    write('2. IMC'),nl,
+    write('3. SALIR'),nl, read(Option),
+    ejecutar(Option).
